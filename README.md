@@ -1,3 +1,1 @@
-# Git Commit Helper
-
-快速產生符合團隊規範的 git commit message。
+使用方式：按 Ctrl+Alt+C（Mac: Cmd+Alt+C）或開啟 Command Palette 搜尋 Git: Smart Commit，依序選擇 commit 類型、輸入 scope（選填）、描述訊息、issue 序號（選填），確認後自動執行 git commit。
