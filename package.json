@@ -37,15 +37,14 @@
       }
     ]
   },
-  "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "deploy:patch": "vsce publish patch --allow-missing-repository",
-    "deploy:minor": "vsce publish minor --allow-missing-repository",
-    "deploy:major": "vsce publish major --allow-missing-repository",
-    "package": "vsce package --allow-missing-repository"
-  },
+ "scripts": {
+  "vscode:prepublish": "npm run compile",
+  "compile": "tsc -p ./",
+  "watch": "tsc -watch -p ./",
+  "package:patch": "npm version patch && vsce package --allow-missing-repository",
+  "package:minor": "npm version minor && vsce package --allow-missing-repository",
+  "package": "vsce package --allow-missing-repository"
+},
   "devDependencies": {
     "@types/node": "^20.0.0",
     "@types/vscode": "^1.85.0",
