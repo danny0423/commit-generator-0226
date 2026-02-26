@@ -41,9 +41,9 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "package:patch": "npm version patch && vsce package --allow-missing-repository",
-    "package:minor": "npm version minor && vsce package --allow-missing-repository",
-    "package": "vsce package --allow-missing-repository"
+    "package:patch": "rm -f *.vsix && npm version patch && vsce package --allow-missing-repository",
+    "package:minor": "rm -f *.vsix && npm version minor && vsce package --allow-missing-repository",
+    "package": "rm -f *.vsix && vsce package --allow-missing-repository"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
